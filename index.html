@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillEdge</title>
+    <link rel="icon" href="images/skilledge.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+<!-- FontAwesome CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+<style>
+/* Container for dropdown positioning */
+.dropdown {
+  position: relative;
+}
+
+/* Dropdown menu positioning */
+.dropdown-menu {
+  position: absolute;
+  top: 100%; /* Position it directly below the dropdown toggle */
+  left: 50%; /* Center it horizontally relative to the container */
+  
+  transform: translateX(-50%); /* Offset by half its width to fully center it */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  padding: 0.7em;
+  z-index: 1000; /* Ensure it appears above other content */
+}
+
+/* Dropdown menu styles for different screen sizes */
+@media only screen and (min-width: 992px) {
+  .dropdown:hover .dropdown-menu {
+    display: flex;
+    left: 0px;
+  }
+  .dropdown-menu.show {
+    display: flex;
+    
+  }
+}
+
+.dropdown-menu ul {
+  list-style: none;
+}
+
+.dropdown-menu li .dropdown-item {
+  color: black;
+  font-size: 1em;
+  padding: 0.5em 1em;
+}
+
+.dropdown-menu li .dropdown-item:hover {
+  background-color: #62cfd3;
+}
+
+.dropdown-menu li:first-child a {
+  font-weight: bold;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  color: #516beb;
+}
+
+.dropdown-menu li:first-child a:hover {
+  background-color: #f1f1f1;
+}
+
+@media only screen and (max-width: 992px) {
+  .dropdown-menu.show {
+    flex-wrap: wrap;
+    max-height: 350px;
+    overflow-y: scroll;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1140px) {
+  .dropdown:hover .dropdown-menu {
+    width: 40vw;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 993px) {
+  .dropdown:hover .dropdown-menu {
+    display: flex;
+  }
+  .dropdown-menu.show {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .dropdown-menu.show {
+    max-height: 60vh;
+    overflow-y: scroll;
+  }
+}
+.navbar{
+  box-shadow: 2px 2px #000;
+}
+.hm:hover{
+  background-color: navy;
+  color: white;
+  border-radius: 5px;
+}
+</style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg ">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html"><img src="images/skilledge.png" width="160px"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto me-3">
+        <li class="nav-item me-3">
+          <a class="nav-link" aria-current="page" href="#" style="background-color: navy; color: white;border-radius: 5px;">HOME</a>
+        </li>
+        <li class="nav-item me-3 dropdown">
+          <a class="nav-link hm" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            COURSES
+          </a>
+          <div class="dropdown-menu">
+            <ul>
+              <li><a class="dropdown-item" href="#">CLOUD COMPUTING</a></li>
+              <li><a class="dropdown-item" href="#">Oracle Cloud DBA</a></li>
+              <li><a class="dropdown-item" href="#">AWS Administration</a></li>
+              <li><a class="dropdown-item" href="#">DevOps with AWS and<br>Azure DevOps</a></li>
+            </ul>
+            <ul>
+              <li><a class="dropdown-item" href="#">TESTING</a></li>
+              <li><a class="dropdown-item" href="#">Manual Testing</a></li>
+              <li><a class="dropdown-item" href="#">Automation Testing</a></li>
+              <li><a class="dropdown-item" href="#">Selenium Testing</a></li>
+              <li><a class="dropdown-item" href="#">API Testing</a></li>
+            </ul>
+            <ul>
+              <li><a class="dropdown-item" href="#">OTHER COURSES</a></li>
+              <li><a class="dropdown-item" href="#">Cyber Security and Ethical<br>Hacking</a></li>
+              <li><a class="dropdown-item" href="#">Data Science</a></li>
+              <li><a class="dropdown-item" href="#">Fullstack - Java</a></li>
+              <li><a class="dropdown-item" href="#">Python Fullstack</a></li>
+              <li><a class="dropdown-item" href="#">SAP</a></li>
+            </ul>
+            <ul>
+              <li><a class="dropdown-item" href="#">USER INTERFACE COURSES</a></li>
+              <li><a class="dropdown-item" href="#">HTML</a></li>
+              <li><a class="dropdown-item" href="#">CSS</a></li>
+              <li><a class="dropdown-item" href="#">JAVASCRIPT</a></li>
+              <li><a class="dropdown-item" href="#">BOOTSTRAP</a></li>
+              <li><a class="dropdown-item" href="#">REACTJS/ANGULAR</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item me-3 dropdown">
+          <a class="nav-link hm" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            BENEFITS
+          </a>
+          <div class="dropdown-menu">
+            <ul>
+              <li><a class="dropdown-item" href="#">OUR SERVICES</a></li>
+              <li><a class="dropdown-item" href="#">TRAININGS</a></li>
+              <li><a class="dropdown-item" href="#">ONLINE SERVERS</a></li>
+              <li><a class="dropdown-item" href="#">VIDEOS</a></li>
+            </ul>
+            <ul>
+              <li><a class="dropdown-item" href="#">OUR BENEFITS</a></li>
+              <li><a class="dropdown-item" href="#">OFFERS</a></li>
+              <li><a class="dropdown-item" href="#">JOBS</a></li>
+              <li><a class="dropdown-item" href="#">JITP</a></li>
+            </ul>
+            </div>
+        <li class="nav-item me-3 active">
+          <a class="nav-link hm" href="#" aria-disabled="true">BATCHES</a>
+        </li>
+        <li class="nav-item me-3">
+          <a class="nav-link hm" href="About.html">ABOUT US</a>
+        </li>
+        <li class="nav-item me-3">
+          <a class="nav-link hm" href="Contact.html" aria-disabled="true">CONTACT US</a>
+        </li>
+    
+        <li class="nav-item ">
+          <a class="nav-link hm" href="login.html" aria-disabled="true">Login</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!--CAROUSEL--STARTED-->
+<!--CAROUSEL--STARTED-->
+<style>
+  .carousels{
+    width: 100%;
+    height: 650px;
+    padding: 0px 70px 0px 70px;    
+  }
+
+.captions1{
+  top: 230px;
+  text-shadow: 3px 3px black;
+  animation: moveText 2s  ease-out forwards;  /* Adjust the duration to speed up or slow down */
+}
+
+@keyframes moveText {
+  0% {
+        transform: translateY(-30%); /* Start above the container */
+    }
+    50% {
+        transform: translateX (0%); /* Stop at the center of the container */
+    }
+    100% {
+        transform: translateY(10%); /*/* End below the container */
+    }
+}
+
+.captions2{
+  top: 230px;
+  text-shadow: 2px 2px black;  animation: moveText2 2s  ease-out forwards;  /* Adjust the duration to speed up or slow down */
+}
+@keyframes moveText2 {
+  0% {
+        transform: translateY(50%); /* Start below the container */
+    }
+    50% {
+        transform: translateX (30%); /* Stop at the center of the container */
+    }
+    100% {
+        transform: translateY(20%); /*/* End below the container */
+    }
+}
+
+.btnn{
+  border: none;
+  background-color: #e50e0e;
+  color: aliceblue;
+  padding: 10px 20px 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  
+}
+.bottom-to-top{
+  padding-top: 15px;
+}
+.top-to-bottom h1{
+  font-size: 37px;
+  font-weight: bold;
+}
+.bottom-to-top h2{
+  color: #fefeff;
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.carousel-slides {
+   
+    width: 300%; /* 100% * number of slides */
+    height: 100%;
+    animation: slide 3s infinite; /* Adjust timing here */
+}
+.carousels
+{
+text-align: center;
+}
+</style>
+
+
+  <div id="carouselExampleIndicators" class="carousel slide  " data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+    </div>
+    <div class="carousel-inner carousels carousel-fade pt-3">
+        <div class="carousel-item  itemss active ">
+            <img src="https://verpex.com/assets/uploads/images/blog/Python-good-for-machine-learning.webp?v=1681274267" class="d-block w-100" alt="Python Programming">
+            <div class="carousel-caption captions1">
+                <div class=" top-to-bottom">
+                    <span><h1 >PYTHON PROGRAMMING LANGUAGE</h1></span>
+                </div>
+               
+            </div>
+            <div class="carousel-caption captions2">
+              <div class=" bottom-to-top">
+              <span>
+                <h2>Transform your career with expert training</h2>
+                <button class="btnn">Our Training</button>
+                <button class="btnn">Why This</button>
+            </span>
+            </div>
+             
+          </div>
+        </div>
+        <div class="carousel-item itemss ">
+            <img src="https://miro.medium.com/v2/resize:fit:700/0*uzNplYo9Zs7glhgG.png" class="d-block w-100" alt="Java Programming">
+            <div class="carousel-caption captions1">
+              <div class=" top-to-bottom">
+                <span><h1>JAVA PROGRAMMING LANGUAGE</h1></span>
+              </div>
+             
+          </div>
+          <div class="carousel-caption captions2">
+            <div class=" bottom-to-top">
+            <span>
+              <h2>Transform your career with expert training</h2>
+              <button class="btnn">Our Training</button>
+              <button class="btnn">Why This</button>
+          </span>
+          </div>
+           
+        </div>
+           
+           
+        </div>
+        <div class="carousel-item itemss">
+            <img src="https://ats.net/wp-content/uploads/Fokus-AI-Phonlamai-Shutterstock.jpg" class="d-block w-100" alt="AI Training">
+            <div class="carousel-caption captions1">
+              <div class=" top-to-bottom">
+                <span><h1>ARTIFICIAL INTELLIGENCE TRAINING</h1></span>
+
+              </div>
+             
+          </div>
+          <div class="carousel-caption captions2">
+            <div class=" bottom-to-top">
+              <span>
+                <h2>Become a data scientist with experts</h2>
+                <button class="btnn">Our Training</button>
+                <button class="btnn">Why This</button>
+            </span>
+          </div>
+           
+        </div>
+           
+        </div>
+        <div class="carousel-item itemss ">
+            <img src="https://ce.entel.cl/wp-content/uploads/2020/10/iStock-1211753386-1.jpg" class="d-block w-100" alt="SAP">
+            <div class="carousel-caption captions1">
+              <div class=" top-to-bottom">
+                <span><h1>SYSTEM APPLICATIONS AND PRODUCTS</h1></span>
+              </div>
+             
+          </div>
+          <div class="carousel-caption captions2">
+            <div class=" bottom-to-top">
+              <span>
+                <h2>Advance your career with SAP</h2>
+                <button class="btnn">Our Training</button>
+                <button class="btnn">Why This</button>
+            </span>
+          </div>
+           
+        </div>
+        </div>
+        <div class="carousel-item itemss">
+            <img src="https://technicalguftgu.in/wp-content/uploads/2024/07/Tests-in-Softwareentwicklung.webp" class="d-block w-100" alt="Software Testing">
+            
+            <div class="carousel-caption captions1">
+              <div class=" top-to-bottom">
+                <span><h1>SOFTWARE TESTING TRAINING PROGRAM</h1></span>
+
+              </div>
+             
+          </div>
+          <div class="carousel-caption captions2">
+            <div class=" bottom-to-top">
+              <span>
+                <h2>Enhance your testing skills with us</h2>
+                <button class="btnn">Our Training</button>
+                <button class="btnn">Why This</button>
+            </span>
+          </div>
+           
+        </div>
+       
+        </div>
+        <div class="carousel-item itemss">
+            <img src="cards/deveop.webp" class="d-block w-100" alt="DevOps Training">
+           
+            <div class="carousel-caption captions1">
+              <div class=" top-to-bottom">
+                <span><h1>DEVOPS TRAINING PROGRAM</h1></span>
+              </div>
+             
+          </div>
+          <div class="carousel-caption captions2">
+            <div class=" bottom-to-top">
+              <span>
+                <h2>Become a DevOps engineer</h2>
+                <button class="btnn">Our Training</button>
+                <button class="btnn">Why This</button>
+            </span>
+          </div>
+           
+        </div>
+        
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+
+<!--CAROUSEL--ENDED-->
+<!--CAROUSEL--ENDED-->
+
+
+      <style>
+        .content h1 b span:hover{
+          border-bottom: 5px solid #CDDC39; 
+        cursor: pointer;
+
+        }
+      </style>
+
+      <div class="content text-center" >
+        <h1 class="text-center pt-5" style="font-family: Arial, Helvetica, sans-serif;"><b><span>MODES OF</span>  TRAINING</b></h1>
+      </div>
+
+    <style>
+      .container{
+        gap:20px;
+        padding-top:40px;
+      }
+      .card{
+        width: 450px;
+        
+      }
+     .card-header{
+      font-size: 20px;
+      font-weight:bold;
+      height: 65px;
+      padding-top:20px;
+     }
+    </style>
+     <div class="container d-flex ">
+      <div class="card   " >
+        <div class="card-header text-center " style="background-color: orange;">CLASSROOM / ONLINE</div>
+        <div class="card-body ">
+          <ul>
+            <li>Classroom & Online live sessions by our expert trainers</li>
+            <li>Sessions delivered by minimum 12+ years experience trainers</li>
+            <li>Real-time scenarios explained</li>
+            <li>Study material and lab activity guide provided</li>
+            <li>Best infrastructure with any time lab facility available</li>
+              <li>one-to-one online server access for LAB practices</li>
+             <li> Technical assistance during lab </li>
+             <li> Best affordable and competitive pricing</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card  " >
+        <div class="card-header text-center" style="background-color: #CDDC39;">SELF-PACED LEARNING</div>
+        <div class="card-body ">
+          <ul>
+            <li>Learn from any place at your feasible timing</li>
+             <li> Recorded videos are provided for self-pace learning</li>
+             <li> Lifetime access to recorded sessions</li>
+             <li> Real-time use cases and scenarios explained</li>
+            <li>  Study material and lab activity guide provided</li>
+             <li> one-to-one online server access for LAB practice</li>
+             <li> Technical support during practice</li>
+              <li>Best competitive pricing</li>
+          </ul>
+            </div>
+      </div>
+      <div class="card " >
+        <div class="card-header text-center" style="background-color: #00bcd4;">CORPORATE TRAINING</div>
+        <div class="card-body ">
+          <ul>
+            <li>Live sessions by our expert and certified trainers</li>
+            <li>  Sessions can be delivered onsite / our premises</li>
+             <li> Real-time scenarios explained</li>
+             <li> Study material and lab activity guide provided</li>
+              <li>one-to-one online server access for LAB practices</li>
+              <li>Technical support during lab</li>
+              <li>Doubts / queries are clarified by the trainer</li>
+              <li>Best discounts and competitive pricing</li>
+          </ul> </div>
+      </div>
+      </div>
+      <div class="content text-center" >
+        <h1 class="text-center pt-5" style="font-family: Arial, Helvetica, sans-serif;font-size: 30px;"><b>POPULAR <span> COURSES</span></b></h1>
+      </div>
+
+<style>
+ .cards {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 300px;
+  height: 320px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  
+  
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.cards button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+.checked {
+  color: orange;
+}
+.cards-top{
+  position: absolute;
+        right: -10px;
+        top: 15px;
+        background: #ff4444;
+      
+        text-align: center;
+        color: #eae6e6;      
+        font-size: 12px;      
+        width: 55px;
+        height: 20px;    
+      
+}
+.img{
+    transition: 0.3s ease;
+  }
+  
+  .img:hover {
+    transform: scale(1.1);
+  }
+</style>
+
+     
+      <div class="container">
+
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner ">
+          <div class="carousel-item active">
+          <div class="row row-cols-md-3">
+
+            <div class="card cards mb-4">
+            <img class="img" src="cards/Java.jpg" alt="Denim Jeans" style="width:100%">
+            <h1 class="pt-2" style="font-size: 20px;">JAVA</h1>
+            <ul><li style="list-style-type: none;">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+             <span class="fa fa-star checked"></span>
+             <span class="fa fa-star checked"></span> (9345 Reviws)</li>
+
+         <li class="pt-2" style="list-style-type: none;"><del><small><i class="bi bi-currency-rupee"></i>28000</small></del> <span style="padding-left: 10px;"><i class="bi bi-currency-rupee"></i>26000</span></li>
+        </ul>
+         <span class="cards-top" >15% off</span>
+        </div>
+
+         <div class="card cards mb-4">
+        <img class="img" src="cards/datasc.jpg" alt="Denim Jeans" style="width:100%">
+        <h1 class="pt-4" style="font-size: 20px;">DATA SCIENCE</h1>
+        <ul><li class="pt-2" style="list-style-type: none;">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star "></span> (4345 Reviws)</li>
+
+      <li class="pt-2" style="list-style-type: none;"><del><small><i class="bi bi-currency-rupee"></i>23000</small></del> <span style="padding-left: 10px;"><i class="bi bi-currency-rupee"></i>19000</span></li>
+ </ul>
+ <span class="cards-top" >19% off</span>
+</div>
+
+<div class="card cards mb-4">
+  <img class="img" src="cards/Difference_between__and_is_operator_in_Python-scaled.jpg" alt="Denim Jeans" style="width:100%">
+  <h1 class="pt-2" style="font-size: 20px;">PYTHON</h1>
+  <ul class="pt-2"><li style="list-style-type: none;">
+  <span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star "></span> (6245 Reviws)</li>
+
+ <li class="pt-3" style="list-style-type: none;"><del><small><i class="bi bi-currency-rupee"></i>23000</small></del> <span style="padding-left: 10px;"><i class="bi bi-currency-rupee"></i>18000</span></li>
+ </ul>
+ <span class="cards-top" >18% off</span>
+</div>
+
+
+
+
+<div class="card cards mb-4">
+  <img class="img" src="cards/deveop.webp" alt="Denim Jeans" style="width:100%">
+  <h1 class="pt-4" style="font-size: 20px;">DEVOPS</h1>
+  <ul><li style="list-style-type: none;">
+  <span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star "></span> (3835 Reviws)</li>
+
+ <li class="pt-3" style="list-style-type: none;"><del><small><i class="bi bi-currency-rupee"></i>4000</small></del> <span style="padding-left: 10px;"><i class="bi bi-currency-rupee"></i>3800</span></li>
+ </ul>
+ <span class="cards-top" >25% off</span>
+</div>
+
+
+<div class="card cards mb-4">
+  <img class="img" src="cards/testing.jfif" alt="Denim Jeans" style="width:100%">
+  <h1 class="pt-5" style="font-size: 20px;">TESTING</h1>
+  <ul><li style="list-style-type: none;">
+  <span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star "></span> (2915 Reviws)</li>
+
+ <li class="pt-3" style="list-style-type: none;"><del><small><i class="bi bi-currency-rupee"></i>5000</small></del> <span style="padding-left: 10px;"><i class="bi bi-currency-rupee"></i>4500</span></li>
+ </ul>
+ <span class="cards-top" >30% off</span>
+</div>
+
+<div class="card cards mb-4">
+  <img class="img" src="cards/sap.jfif" alt="Denim Jeans" style="width:100%">
+  <h1 class="pt-5" style="font-size: 20px;">SAP</h1>
+  <ul><li style="list-style-type: none;">
+  <span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star "></span> (4515 Reviws)</li>
+
+ <li class="pt-2" style="list-style-type: none;"><del><small><i class="bi bi-currency-rupee"></i>30000</small></del> <span style="padding-left: 10px;"><i class="bi bi-currency-rupee"></i>25500</span></li>
+ </ul>
+ <span class="cards-top" >27% off</span>
+</div>
+
+            
+            </div>
+           
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+          </div>
+        </div>
+      </div>
+      <style>
+        .iconss{
+          align-items: center;
+          justify-content: center;
+          gap: 100px;
+
+        }
+        .iconn{
+          list-style-type: none;
+          border-right: 1px solid;
+          padding-right: 50px;
+          font-size: 15px;
+          
+        }
+      </style>
+
+      <div class="container-fluid pt-3 bg-dark text-white text-center ">
+        <div class="row">
+          
+          <div class="col-12 d-flex iconss">
+          <ul  ><li class="iconn pt-3" ><img src="icons/ssbwt09i.png" width="40px"></br><span>5000+</br>Students Trained</span></li></ul>
+          <li class="iconn"><img src="icons/o1u9stip.png" width="40px"></br><span>400+</br>Batches Delivered</span></li></ul>
+          <li class="iconn"><img src="icons/of0ebp16.png" width="40px"></br><span>80+</br>Expert trainer</span></li></ul>
+          <li class="iconn"><img src="icons/b8giduwa.png" width="40px"></br><span>40+</br>Courses</span></li></ul>
+          <li class="iconn" ><img src="icons/spzj4r4c.png" width="40px"></br><span>2010</br>Since</span></li></ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- <style>
+        .cardhover{
+         width: 350px;
+         padding: 10px;
+         height: 400px;
+         font-size: 18px;
+         letter-spacing: 1px;
+         transition: background-color 1.0s ease;
+         border: none;
+
+        background-color: white;   
+        }
+       .card-title{
+        font-size: 17px;
+        font-weight: bold;
+       }
+       .cardhover:hover{
+        background-color:  rgba(32,80,129,255);
+        color: white;
+        
+       }
+       .demo{
+        background-color: #eae6e6;
+        padding-bottom: 80px;
+       }
+      
+      </style>
+<div class="demo">
+      <div class="content text-center " >
+        <h1 class="text-center pt-5" style="font-family: Arial, Helvetica, sans-serif;font-size: 23px;"><b>WHY TO JOIN <span> SKILLEDGE</span></b></h1>
+      </div>
+
+      <div class="container ">
+
+        <div class="row row-cols-1 row-cols-md-3 g-4 ">
+          <div class="col">
+            <div class="card align-items-center cardhover">
+              <img src="icons1/ryb4piwa.png" class="card-img-top pt-4" style="width: 50px;" alt="...">
+              <div class="card-body ">
+                <h5 class="card-title text-center pt-2 pb-2">EXPERT TRAINERS</h5>
+                <ul ><li>Certified Trainers, OCP and JAVA Certified Master</li>
+                
+                <li>Trainers with 18+ yrs experience</li>
+              <li>Mr. Suresh  is an JAVA trainer </li>
+              <li>Delivered more than 800 batches</li>
+            
+            </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card align-items-center cardhover ">
+              <img src="icons1/fqkhbmhq.png" class="card-img-top pt-4" style="width: 50px;" alt="...">
+              <div class="card-body">
+                <h5 class="card-title text-center pt-2 pb-2">CLASSROOM & ONLINE</h5>
+                <ul><li>Face-to-face interactive sessions with experts</li>
+                
+                <li>Concepts & Live demos with real time examples</li>
+              <li>Learn as per ur feasible timing </li>
+              <li>Get trained from anywhere</li>
+            
+            </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card align-items-center cardhover">
+              <img src="icons1/sxsolein.png" class="card-img-top pt-4" style="width: 50px;" alt="...">
+              <div class="card-body">
+                <h5 class="card-title text-center pt-2 pb-2">BEST LAB FACILITY</h5>
+                <ul><li>24x7 Server access for doing practices</li>
+                
+                <li>1-to-1 Dedicated Machine for practice</li>
+              <li>Learn with guided hands-on lab Material</li>
+              <li>Certified Lab Assistance & technical support</li>
+            
+            </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card align-items-center cardhover">
+              <img src="icons1/r8bo4m4q.png" class="card-img-top pt-4" style="width: 50px;" alt="...">
+              <div class="card-body">
+                <h5 class="card-title text-center pb-2 pt-2">COMPETITIVE PRICES</h5>
+                <ul><li>Comparatively reasonable prices with our quality training</li>
+                
+                <li>Best Discount on our latest courses</li>
+              <li>Multiple courses (Combo) offer with huge discount </li>
+              <li>Flexibility of Payment</li>
+            
+            </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card align-items-center cardhover">
+              <img src="icons1/welgt7eq.png" class="card-img-top pt-4" style="width: 50px;" alt="...">
+              <div class="card-body">
+                <h5 class="card-title text-center pb-2 pt-2 ">COURSE DESIGN & MATERIAL</h5>
+                <ul><li>Course content and material designed by our Experts</li>
+                
+                <li>Study Material for building concepts</li>
+              <li>Step-by-step Lab Practice Guide </li>
+              <li>Customized Courses matching the job requirements </li>
+            
+            </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card align-items-center cardhover">
+              <img src="icons1/nrhnpqyu.png" class="card-img-top pt-4" style="width: 50px;" alt="...">
+              <div class="card-body">
+                <h5 class="card-title text-center pb-2 pt-2">WE ARE COMMITTED</h5>
+                <ul><li>We consider your success and achievement is our commitment</li>
+                
+                <li>Enjoy flexibility and savings</li>
+              <li>​Guidance for Exams and Certifications </li>
+              <li>100% Learning / Training satisfaction guarantee </li>
+            
+            </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+ -->
+
+ <!--cards-new-->
+
+ <style>
+
+
+.ol-cards,
+.ol-cards *,
+.ol-cards *::before,
+.ol-cards *::after {
+  margin : 0;
+  padding: 0;
+  box-sizing: border-box;
+  border-radius: 50px 50px 50px 50px;
+}
+.ol-cards {
+  --ol-cards-color-bg: var(--color-bg);
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 45em;
+  padding: 2em;
+  gap: 2em;
+  counter-reset: ol-cards-counter;
+}
+
+.ol-cards li {
+  display: grid;
+  grid-template-areas:
+    "step title"
+    "step content";
+  padding: 1em 2em 1em 0;
+  row-gap: 0.5em;
+  column-gap: 2em;
+  box-shadow: 0.5em 0.5em 1em rgba(0, 0, 0, 0.4),
+    inset 0.05em 0.05em rgba(255, 255, 255, 1);
+  counter-increment: ol-cards-counter;
+  text-align: left;
+  background-color: var(--ol-cards-color-bg);
+}
+.ol-cards li:first-child {
+  margin-left: -160px;
+  
+}
+.ol-cards li:nth-child(2) {
+  margin-right: -160px; 
+}
+.ol-cards li:nth-child(3) {
+  margin-left: -160px; 
+}
+.ol-cards li:nth-child(4) {
+  margin-right: -160px; 
+}
+.ol-cards li:nth-child(5) {
+  margin-left: -160px; 
+}
+.ol-cards li:nth-child(6) {
+  margin-right: -160px; 
+}
+.move-right {
+  margin-left: 20px; /* Adjust this value as needed */
+}
+.move-right {
+  margin-right: 20px; /* Adjust this value as needed */
+}
+.move-right {
+  margin-left: 20px; /* Adjust this value as needed */
+}
+.move-right {
+  margin-right: 20px; /* Adjust this value as needed */
+}
+.move-right {
+  margin-left: 20px; /* Adjust this value as needed */
+}
+.move-right {
+  margin-right: 20px; /* Adjust this value as needed */
+}
+
+
+
+
+.ol-cards.alternate li:nth-child(even) {
+  grid-template-areas:
+    "title step"
+    "content step";
+  padding: 1em 0 1em 2em;
+  
+}
+
+.ol-cards li .step {
+  grid-area: step;
+  display: flex;
+  align-self: flex-start;
+  background-color: var(--ol-cards-color-accent);
+  border-radius: 10em 10em 10em 10em;
+  padding: 1em;
+  
+  justify-content: flex-end;
+  box-shadow: inset 0.25em 0.25em 0.5em rgba(0, 0, 0, 0.4),
+    0em 0.05em rgba(255, 255, 255, 1);
+  flex: 1;
+  gap: 1em;
+}
+
+.ol-cards li .step::before {
+ 
+  flex: 1;
+  align-self: center;
+  color: var(--ol-cards-color-bg);
+  font-weight: bold;
+  font-size: 2em;
+  text-shadow: 0.025em 0.025em 0.125em rgba(0, 0, 0, 0.4);
+}
+.ol-cards.alternate li:nth-child(even) .step {
+ 
+  flex-direction: row-reverse;
+  
+}
+.ol-cards li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.2);
+}
+
+.ol-cards li .step i {
+  color: var(--ol-cards-color-accent);
+  width: 2em;
+  height: 2em;
+  font-size: 1.8em;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background-color: var(--ol-cards-color-bg);
+  box-shadow: 0.25em 0.25em 0.5em rgba(0, 0, 0, 0.4),
+    inset 0.05em 0.05em rgba(255, 255, 255, 1);
+}
+
+.ol-cards li .title {
+  grid-area: title;
+  color: var(--ol-cards-color-accent);
+  font-weight: bold;
+}
+.ol-cards li .content {
+  grid-area: content;
+  font-size: 0.9em;
+}
+
+@media only screen and (max-width: 500px) {
+  .ol-cards{
+    padding: 1em;
+  }
+  .ol-cards li{
+    column-gap: 0em;
+    grid-template-areas:
+      'step title'
+      'content content';
+    grid-template-columns: min-content auto;
+    padding: 1em 0em;
+  }
+  .ol-cards.alternate li:nth-child(even){
+    column-gap: 0em;
+    grid-template-areas:
+      'title step'
+      'content content';
+    grid-template-columns: auto min-content ;
+    padding: 1em 0em;
+  }
+  .ol-cards li .title{
+    padding: 0 1em;
+    align-self: center;
+    width: auto;
+    
+  }
+  .ol-cards li .step{
+    font-size: .5em;
+  }
+  .ol-cards li .content{
+    padding: 0 1em;
+  }
+}
+.b{
+  
+ font-weight: bold;
+ 
+}
+
+ </style>
+ <h3 class="b text-center pt-5">WHY TO JOIN SKILLEDGE</h3>
+    <ul class=" ol-cards alternate ">
+      <li class="move-left" style="--ol-cards-color-accent:#f68121">
+        <div class="step move-right">
+            <img src="icons1/ryb4piwa.png"  alt="Expert Trainers">
+        </div>
+        <div class="title">EXPERT TRAINERS</div>
+        <p>Certified Trainers, OCP and JAVA Certified Master Trainers with 18+ yrs experience.
+           Mr.Somesh  is a JAVA trainer. Delivered more than 800 batches</p>
+    </li>
+    
+      
+    <li style="--ol-cards-color-accent:#ed1c24">
+      <div class="step move-right">
+          <img src="icons1/fqkhbmhq.png" alt="Classroom & Online">
+      </div>
+      <div class="title">CLASSROOM & ONLINE</div>
+      <p>Face-to-face interactive sessions with experts. 
+        Concepts & Live demos with real-time examples.
+         Learn as per your feasible timing. Get trained from anywhere.</p>
+  </li>
+  
+  <li style="--ol-cards-color-accent:#582c8b">
+    <div class="step move-right">
+        <img src="icons1/sxsolein.png" alt="Best Lab Facility">
+    </div>
+    <div class="title">BEST LAB FACILITY</div>
+    <p>24x7 Server access for doing practices. 
+      1-to-1 Dedicated Machine for practice.
+       Learn with guided hands-on lab material. 
+       Certified Lab Assistance & technical support.</p>
+</li>
+
+<li style="--ol-cards-color-accent:#0166b4">
+  <div class="step move-right">
+      <img src="icons1/r8bo4m4q.png" alt="Competitive Prices">
+  </div>
+  <div class="title">COMPETITIVE PRICES</div>
+  <p>Comparatively reasonable prices with our quality training.
+     Best discount on our latest courses.
+      Multiple courses (Combo) offer with huge discount. Flexibility of Payment.</p>
+</li>
+
+<li style="--ol-cards-color-accent:#00a560">
+  <div class="step move-right">
+      <img src="icons1/welgt7eq.png" alt="Course Design & Material">
+  </div>
+  <div class="title">COURSE DESIGN & MATERIAL</div>
+  <p>Course content and material designed by our Experts.
+     Study Material for building concepts.
+      Step-by-step Lab Practice Guide. 
+      Customized Courses matching the job requirements.</p>
+</li>
+
+<li style="--ol-cards-color-accent:#00a560">
+  <div class="step move-right">
+      <img src="icons1/nrhnpqyu.png" alt="We Are Committed">
+  </div>
+  <div class="title">WE ARE COMMITTED</div>
+  <p>We consider your success and achievement is our commitment.
+     Enjoy flexibility and savings. Guidance for Exams and Certifications.
+      100% Learning / Training satisfaction guarantee.</p>
+</li>
+
+    </ul>
+    
+ <!--cards-new-->
+
+<style>
+  .footer-logo{
+      background-color: white;
+      margin-bottom: 20px;
+    }
+    .line{
+      text-decoration: none;
+    }
+</style>
+<footer class="text-center text-lg-start text-white" style="background-color: #1c2331">
+  
+  <section>
+    <div class="container text-center text-md-start">
+      <div class="row mt-3">
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <a href="#"><img class="footer-logo" src="images/skilledge.png" alt="Skilledge Logo" style="width: 200px;"></a>
+          <p>
+            SKILLEDGE - Global Online IT training platform for individuals & corporates with our best certified trainers.
+            We provide training with a wide range of courses, videos including course material and online server access for
+           lab practice.
+          </p>
+        </div>
+        
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold">QIUCK LINKS</h6>
+          <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 98px; height: 2px"/>
+          <p>
+            <a href="#" class="text-white line">Batches</a>
+          </p>
+          <p>
+            <a href="#" class="text-white line">Courses</a>
+          </p>
+          <p>
+            <a href="#" class="text-white line">Our Trainers</a>
+          </p>
+          <p>
+            <a href="#" class="text-white line">Our Management</a>
+          </p>
+        </div>
+      
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <h6 class="text-uppercase fw-bold">GET IN TOUCH</h6>
+          <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 110px; height: 2px"/>
+          <p><i class="fas fa-home mr-3"></i> Guntur, Andhra Pradesh</p>
+          <p><i class="fas fa-envelope mr-3"></i> skilledge@developtrees.com</p>
+          <p><i class="fas fa-phone mr-3"></i> +98 889 211 11</p>
+          <a href="#" class="text-white me-4">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="text-white me-4">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="text-white me-4">
+            <i class="fab fa-google"></i>
+          </a>
+          <a href="#" class="text-white me-4">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="text-white me-4">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </div>
+
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold">LOCATION</h6>
+          <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 78px; height: 2px"/>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3829.134178188399!2d80.43425967418503!3d16.31608693278394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a75cd48dfe015%3A0xa7b2378a4590b4c!2sDeveloptrees%20Dsr%20It%20Solutions%20Private%20Limited!5e0!3m2!1sen!2sin!4v1725537771436!5m2!1sen!2sin" width="280" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+    © 2024 Copyright:
+    <a class="text-white" href="#">All Rights Reserved By SkillEdge</a>
+  </div>
+</footer>
+
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+      
+    </body>
+</html>
